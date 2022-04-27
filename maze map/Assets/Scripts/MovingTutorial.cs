@@ -47,10 +47,10 @@ public class MovingTutorial : MonoBehaviour
     void Awake()
     {
         mode = Jscall.controlmode;
-        Debug.Log("Æ©Åä¸®¾ó " + mode);
+        Debug.Log("Æ©ï¿½ä¸®ï¿½ï¿½ " + mode);
         SelectControl(mode);
         uid = FirebaseWebGL.Examples.Auth.LoginHandler.UserUid;
-        Debug.Log("Æ©Åä¸®¾ó " + uid);        
+        Debug.Log("Æ©ï¿½ä¸®ï¿½ï¿½ " + uid);        
         CallCam(uid);        
     }
 
@@ -59,14 +59,14 @@ public class MovingTutorial : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
     }
-    IEnumerator LoadData() //json ¹®ÀÚ¿­ ¹Þ¾Æ¿À±â
+    IEnumerator LoadData() //json ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½Þ¾Æ¿ï¿½ï¿½ï¿½
     {
-        string GetDataUrl = $"https://j6e101.p.ssafy.io/recog/detect/{uid}/control";
-        //string GetDataUrl = $"http://127.0.0.1:8000/recog/detect/{uid}/control";
+        // string GetDataUrl = $"https://j6e101.p.ssafy.io/recog/detect/{uid}/control";
+        string GetDataUrl = $"http://127.0.0.1:8000/recog/detect/{uid}/control";
         using (UnityWebRequest request = UnityWebRequest.Get(GetDataUrl))
         {
             yield return request.Send();
-            if (request.isNetworkError || request.isHttpError) //ºÒ·¯¿À±â ½ÇÆÐ ½Ã
+            if (request.isNetworkError || request.isHttpError) //ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
             {
                 Debug.Log(request.error);
                 dirV = 0;

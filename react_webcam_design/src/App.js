@@ -48,13 +48,13 @@ const WebcamStreamCapture = () => {
   const webcamRef = React.useRef(null);
   const mediaRecorderRef = React.useRef(null);
   const [imageSrc, setImageSrc] = React.useState(null);
-  const zeno = "http://127.0.0.1:8000";
+  const user = "http://127.0.0.1:8000";
   const ssafy = "https://j6e101.p.ssafy.io";
-  const zeno_sub = "/recog/upload/";
+  const user_sub = "/recog/upload/";
   const ssafy_sub = "/recog/upload/";
   const id_class = document.querySelector("#root");
   const id_mode = document.querySelector("#controlmode");
-  const api = axios.create({ baseURL: ssafy });
+  const api = axios.create({ baseURL: user });
   const resizeImg = (file) =>
     new Promise((resolve) => {
       Resizer.imageFileResizer(
@@ -95,7 +95,7 @@ const WebcamStreamCapture = () => {
         //console.log("mode " + sub_mode);
         // const sub_uid = "ㅇㄹㅇㄹ";
         if (sub_uid !== "test") {
-          const url_sub = ssafy_sub + sub_uid + "/" + sub_mode + "/";
+          const url_sub = user_sub + sub_uid + "/" + sub_mode + "/";
           const { data } = api.post(url_sub, form);
         }
       } else if (id_class.className === "test") {

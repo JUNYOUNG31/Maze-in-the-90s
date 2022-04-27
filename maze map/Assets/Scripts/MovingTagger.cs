@@ -77,14 +77,14 @@ public class MovingTagger : MonoBehaviour
         turnSpeed = turnSpeedValue;
     }
 
-    IEnumerator LoadData() //json ¹®ÀÚ¿­ ¹Þ¾Æ¿À±â
+    IEnumerator LoadData() //json ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½Þ¾Æ¿ï¿½ï¿½ï¿½
     {
-        string GetDataUrl = $"https://j6e101.p.ssafy.io/recog/detect/{uid}/control";
-        //string GetDataUrl = $"http://127.0.0.1:8000/recog/detect/{uid}/control";
+        // string GetDataUrl = $"https://j6e101.p.ssafy.io/recog/detect/{uid}/control";
+        string GetDataUrl = $"http://127.0.0.1:8000/recog/detect/{uid}/control";
         using (UnityWebRequest request = UnityWebRequest.Get(GetDataUrl))
         {
             yield return request.Send();
-            if (request.isNetworkError || request.isHttpError) //ºÒ·¯¿À±â ½ÇÆÐ ½Ã
+            if (request.isNetworkError || request.isHttpError) //ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
             {
                 Debug.Log(request.error);
                 dirV = 0;

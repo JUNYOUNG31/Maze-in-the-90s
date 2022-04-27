@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;//Æ÷Åæ ±â´É »ç¿ë
+using Photon.Pun;//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 using Photon.Realtime;
 using System.Runtime.InteropServices;
 using UnityEngine.Networking;
@@ -28,12 +28,12 @@ public class LeaveGame : MonoBehaviourPunCallbacks
             FormData data1 = new FormData();
             data1.data = uid;
             string data2 = JsonUtility.ToJson(data1);
-            string GetDataUrl = $"https://j6e101.p.ssafy.io/recog/detect/{uid}/delete";
-            //string GetDataUrl = $"http://127.0.0.1:8000/recog/detect/{uid}/delete";
+            // string GetDataUrl = $"https://j6e101.p.ssafy.io/recog/detect/{uid}/delete";
+            string GetDataUrl = $"http://127.0.0.1:8000/recog/detect/{uid}/delete";
             using (UnityWebRequest request = UnityWebRequest.Post(GetDataUrl, data2))
             {
                 yield return request.Send();
-                if (request.isNetworkError || request.isHttpError) //ºÒ·¯¿À±â ½ÇÆÐ ½Ã
+                if (request.isNetworkError || request.isHttpError) //ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
                 {
                     Debug.Log(request.error);
                 }
@@ -41,7 +41,7 @@ public class LeaveGame : MonoBehaviourPunCallbacks
                 {
                     if (request.isDone)
                     {
-                        Debug.Log(data1.data + "»èÁ¦¿Ï·á");
+                        Debug.Log(data1.data + "ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½");
                     }
                 }
             }
@@ -72,28 +72,28 @@ public class LeaveGame : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel("Lobby");
     }
 
-    public void LeaveRoom() // ´ë±â½Ç ÅðÀå
+    public void LeaveRoom() // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     {
-        PhotonNetwork.LeaveRoom();//¹æ¶°³ª±â Æ÷Åæ ³×Æ®¿öÅ© ±â´É
+        PhotonNetwork.LeaveRoom();//ï¿½æ¶°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½Å© ï¿½ï¿½ï¿½
         Exit_to();        
     }
 
-    public override void OnLeftRoom()//¹æÀ» ¶°³ª¸é È£Ãâ
+    public override void OnLeftRoom()//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½
     {
-        PhotonNetwork.LoadLevel("Lobby");// Lobby ¾À ºÒ·¯¿À±â
+        PhotonNetwork.LoadLevel("Lobby");// Lobby ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½
     }
-    public override void OnRoomListUpdate(List<RoomInfo> roomList)//Æ÷ÅæÀÇ ·ë ¸®½ºÆ® ±â´É
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½
     {
-        foreach (Transform trans in roomListContent)//Á¸ÀçÇÏ´Â ¸ðµç roomListContent
+        foreach (Transform trans in roomListContent)//ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ roomListContent
         {
-            Destroy(trans.gameObject);//·ë¸®½ºÆ® ¾÷µ¥ÀÌÆ®°¡ µÉ¶§¸¶´Ù ½ÏÁö¿ì±â
+            Destroy(trans.gameObject);//ï¿½ë¸®ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½É¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
-        for (int i = 0; i < roomList.Count; i++)//¹æ°¹¼ö¸¸Å­ ¹Ýº¹
+        for (int i = 0; i < roomList.Count; i++)//ï¿½æ°¹ï¿½ï¿½ï¿½ï¿½Å­ ï¿½Ýºï¿½
         {
-            if (roomList[i].RemovedFromList)//»ç¶óÁø ¹æÀº Ãë±Þ ¾ÈÇÑ´Ù. 
+            if (roomList[i].RemovedFromList)//ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½. 
                 continue;
             Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
-            //instantiate·Î prefabÀ» roomListContentÀ§Ä¡¿¡ ¸¸µé¾îÁÖ°í ±× ÇÁ¸®ÆéÀº i¹øÂ° ·ë¸®½ºÆ®°¡ µÈ´Ù. 
+            //instantiateï¿½ï¿½ prefabï¿½ï¿½ roomListContentï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ iï¿½ï¿½Â° ï¿½ë¸®ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½È´ï¿½. 
         }
     }
 }
