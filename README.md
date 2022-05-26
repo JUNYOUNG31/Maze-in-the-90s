@@ -99,11 +99,11 @@
 
 ## :triangular_flag_on_post: ERD
 
-![ERD.png](README.assets/ERD.png)
+![ERD](https://user-images.githubusercontent.com/87454934/170527918-598210a1-f760-4a50-aea7-237ea311c36c.png)
 
 ## :triangular_flag_on_post: 시스템 아키텍쳐
 
-![Architecture.png](README.assets/Architecture.png)
+![Architecture](https://user-images.githubusercontent.com/87454934/170528003-a8860736-3bcd-4964-a85d-fa47ad1a2d97.png)
 
 ## :triangular_flag_on_post: 주요 기술
 
@@ -125,13 +125,13 @@
 
 - **랭킹 확인**: 로그인 없이 랭킹 확인 가능 
   
-  ![](README.assets/Login.gif)
+  ![Login](https://user-images.githubusercontent.com/87454934/170528012-0fee83b4-acb9-438f-b766-8ed3e782812a.gif)
   
   
 
 - **회원가입**
   
-  ![](README.assets/Signup.png)
+  ![Signup](https://user-images.githubusercontent.com/87454934/170528018-70218295-3db9-44b2-b449-d265c8fda2c7.png)
   
   ---
 
@@ -139,17 +139,17 @@
 
 - **프로필, 마이페이지, 랭킹, 방 목록 확인 가능**
   
-  ![Lobby.png](README.assets/Lobby.png)
+  ![Lobby](https://user-images.githubusercontent.com/87454934/170528098-ef8190de-2759-4c51-bd57-15be1acd251e.png)
 
 - **방생성**
   
-  ![RoomCreateCute.gif](README.assets/RoomCreateCute.gif)
+  ![RoomCreate](https://user-images.githubusercontent.com/87454934/170528234-ffab46aa-cae0-4428-a8e1-dcdeca75fa6b.png)
   
   
 
 - **튜토리얼**
   
-  ![Tutorial.PNG](README.assets/Tutorial.PNG)
+  ![Tutorial](https://user-images.githubusercontent.com/87454934/170528283-e8d4f3e3-0867-49c0-8355-e73ac1943e0d.PNG)
   
   ---
 
@@ -161,11 +161,11 @@
 
 - **프로필 이미지 변경**
   
-  ![ProfileImageChange.gif](README.assets/ProfileImageChange.gif)
+  ![ProfileImageChange](https://user-images.githubusercontent.com/87454934/170528340-7fff144e-9131-4065-b108-83ff5d064523.gif)
 
 - **닉네임 및 비밀번호 변경**
   
-  ![NicknameChange.gif](README.assets/NicknameChange.gif)
+  ![NicknameChange](https://user-images.githubusercontent.com/87454934/170528370-d2b7c881-e786-4dc2-b748-e7a91a04da93.gif)
 
 - **로그아웃**
 
@@ -185,7 +185,7 @@
 
 - **'레디' 클릭 시 게임 준비 완료 상태**
   
-  ![](README.assets/RoomToGame.gif)
+  ![RoomToGame](https://user-images.githubusercontent.com/87454934/170528459-cb65ee49-8f46-4350-b998-adfab53863f7.gif)
   
   
   
@@ -201,29 +201,29 @@
   
   - Sullae Grave stage 1
   
-  ![MazeForest1.PNG](README.assets/MazeForest1.PNG)
+  ![MazeForest1](https://user-images.githubusercontent.com/87454934/170528500-68885447-0454-476c-bed8-5061d8d0c9c2.PNG)
   
-  ![MazeGrave4.PNG](README.assets/MazeGrave4.PNG)
+  ![MazeGrave4](https://user-images.githubusercontent.com/87454934/170528689-e5d202f2-e06e-44d1-8a2f-50309914b210.PNG)
   
   
 
 - **게임 시작 화면**: 5초 카운타다운 후 게임 시작 
   
-  ![](README.assets/GameStart.gif)
+  <img src="https://user-images.githubusercontent.com/87454934/170530089-c540a7af-0e21-4d81-a3be-64900f336c55.gif" alt="gameStart" style="zoom:200%;" />
 
 - **게임 진행 화면**
   
-  ![](README.assets/Walking.gif)
+  <img src="https://user-images.githubusercontent.com/87454934/170530292-92addb51-c4cd-4375-8930-31dd2f272564.gif" alt="walking" style="zoom:200%;" />
 
 - **게임 종료 화면**: 전원이 End Point에 들어오면 결과 확인 가능
   
-  ![Finish.gif](README.assets/Finish.gif)
+  ![Finish](https://user-images.githubusercontent.com/87454934/170528881-68040f38-2b66-45c6-8223-044e166f76ad.gif)
   
   
 
 - **Menu 버튼 클릭 시**
   
-  ![](README.assets/GameExit.gif)
+  ![GameExit](https://user-images.githubusercontent.com/87454934/170528822-137fb157-4db5-4041-aaa9-aeec84272bdb.gif)
   
   
   
@@ -233,7 +233,7 @@
 
 - **모드와 맵에 따른 게임 랭킹 확인 가능**
   
-  ![Ranking.png](README.assets/Ranking.png)
+  ![Ranking](https://user-images.githubusercontent.com/87454934/170529014-0cb3e0f4-bbbf-424c-bc45-b810e190b2b3.png)
 
 ## :triangular_flag_on_post: 개발기록
 
