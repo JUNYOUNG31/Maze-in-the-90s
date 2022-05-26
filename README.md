@@ -209,11 +209,11 @@
 
 - **게임 시작 화면**: 5초 카운타다운 후 게임 시작 
   
-  <img src="https://user-images.githubusercontent.com/87454934/170530089-c540a7af-0e21-4d81-a3be-64900f336c55.gif" alt="gameStart" style="zoom:200%;" />
+  <img src="https://user-images.githubusercontent.com/87454934/170530089-c540a7af-0e21-4d81-a3be-64900f336c55.gif" alt="gameStart" width="900"/>
 
 - **게임 진행 화면**
   
-  <img src="https://user-images.githubusercontent.com/87454934/170530292-92addb51-c4cd-4375-8930-31dd2f272564.gif" alt="walking" style="zoom:200%;" />
+  <img src="https://user-images.githubusercontent.com/87454934/170530292-92addb51-c4cd-4375-8930-31dd2f272564.gif" alt="walking" width="900"/>
 
 - **게임 종료 화면**: 전원이 End Point에 들어오면 결과 확인 가능
   
